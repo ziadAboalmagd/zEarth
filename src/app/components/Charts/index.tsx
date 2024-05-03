@@ -10,8 +10,10 @@ import {
   Tooltip,
   Legend,
   BarElement,
+  RadialLinearScale,
+  ArcElement,
 } from "chart.js";
-import { Bar, Line } from "react-chartjs-2";
+import { Bar, Line, PolarArea } from "react-chartjs-2";
 
 ChartJS.register(
   CategoryScale,
@@ -19,6 +21,8 @@ ChartJS.register(
   PointElement,
   LineElement,
   BarElement,
+  ArcElement,
+  RadialLinearScale,
   Title,
   Tooltip,
   Legend
@@ -87,12 +91,50 @@ const data = {
     },
   ],
 };
+const coptions = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: "top" as const,
+    },
+  },
+  scales: {
+    x: {
+      grid: {
+        color: "#bfc0c0",
+      },
+      ticks: {
+        color: "#e7d7c1",
+      },
+    },
+    y: {
+      grid: {
+        color: "#bfc0c0",
+      },
+      ticks: {
+        color: "#e7d7c1",
+      },
+    },
+  },
+};
+const cdata = {
+  datasets: [
+    {
+      label: "clients",
+      data: [320, 370, 400, 500, 600, 405, 220],
+      borderColor: ["#FF6384", "#4BC0C0", "#FFCE56", "#E7E9ED", "#36A2EB"],
+      backgroundColor: ["#FF6384", "#4BC0C0", "#FFCE56", "#E7E9ED", "#36A2EB"],
+    },
+  ],
+};
 
 export default function Charts() {
   // check width
   const { width } = useViewport();
   // small screens
   const isSmallScreen = Number(width) < 680;
+  // too small
+  const istooSmall = Number(width) < 480;
 
   return (
     <div className="flex flex-col justify-between gap-7 min-h-semiFull mx-11 my-2">
@@ -111,10 +153,14 @@ export default function Charts() {
         <h6 className="text-f-white">117 clients</h6>
       </div>
       {/* reports charts*/}
-      <div className="flex flex-1 flex-col justify-between bg-f-lbackgroud py-7 px-5 rounded-2xl min-h-24">
+      <div className="flex flex-1 flex-col justify-between bg-f-lbackgroud py-7 px-5 rounded-2xl min-h-40">
         <h5 className="font-semibold text-f-white">reports</h5>
         {isSmallScreen ? (
-          <Bar options={options} data={data} />
+          istooSmall ? (
+            <PolarArea options={coptions} data={cdata} />
+          ) : (
+            <Bar options={options} data={data} />
+          )
         ) : (
           <Line options={options} data={data} />
         )}
