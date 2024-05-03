@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Jersey+10&family=Noto+Kufi+Arabic:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu";
+}
+
+html {
+  margin: 0 3px;
+}
+
+// varaibles
+// $link-color: #f2a35f;
+// $icon-color: #a37370;
+// $link-hover-color: #69848c;
+// $hedaer-color: #f7d155;
+// $desc-color: #e7d7c1;
+// $light-color: #1a1e23;
+
+// root
+:root {
+  // final colors
+  --f-backgroud: #31383f;
+  --f-silver: #bfc0c0;
+  --f-white: #e7d7c1;
+  --f-lyellow: #ffffb3;
+  --f-yellow: #ffff2b;
+  --f-dyellow: #f9c22e;
+  --f-coral: #ef8354;
+  --f-purple: hsl(234.12deg 100% 80%);
+  --f-dpurple: #575cdf;
+  --f-pink: #f490c1;
+  --f-dpink: #ff8a99;
+  --f-lpink: hsl(319.57deg 100% 63.92%);
+  --f-red: #e01a4f;
+  --f-teal: hsl(180deg 100% 75.49%);
+  --f-blue: hsl(214.93deg 100% 55.88%);
+  --f-sky: #53b3cb;
+  // dark theme
+  --link-color: #f2a35f;
+  --icon-color: #a37370;
+  --link-hover-color: #69848c;
+  --header-color: #f7d155;
+  --desc-color: #e7d7c1;
+  --background-color: #1a1e23;
+  // old theme
+  --light-color: rgba(241, 239, 235, 0.3);
+  --librown-color: rgba(202, 166, 144, 0.21);
+  --brown-color: rgb(202, 166, 144);
+  --beige-color: #ffeecf;
+  --primary-color: #d36582;
+  --secondry-color: #c9a690;
+  --blue-color: #2b59c3;
+  --darkblue-color: #253c78;
+  --green-color: seagreen;
+}
+
+*:not(input, textarea)::selection {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  // background-color: hsl(var(--b1) / var(--tw-bg-opacity, 1));
+  background-color: var(--background-color);
+  color: var(--f-white);
+  max-width: 79rem;
+  margin: auto;
+}
+
+input {
+  padding-right: 7px;
+  padding-left: 7px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+select,
+option {
+  border: none;
+  outline: none;
+}
+
+button {
+  width: fit-content;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+  color: rgb(245 248 255 / var(--tw-text-opacity));
+  --tw-text-opacity: 1;
+  letter-spacing: 2px;
+}
+
+textarea {
+  min-height: 7rem;
+  padding-right: 7px;
+  padding-left: 7px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  resize: none !important;
+}
+
+input:focus,
+input:focus-visible,
+select:focus,
+select:focus-visible,
+textarea:focus,
+textarea:focus-visible {
+  outline: none;
+  border: none;
+}
+
+.zoverlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  overflow: hidden;
+  inset: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  background-color: rgb(43 44 53 / 0.35);
+  pointer-events: none;
+  z-index: 21;
+  transition: all 0.25s ease-out;
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  -ms-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+}
+
+h1 {
+  color: var(--header-color);
+}
+h2 {
+  color: var(--link-color);
+}
+h3 {
+  color: var(--f-sky);
+}
+h4 {
+  color: var(--f-silver);
+}
+h5 {
+  color: var(--f-silver);
+}
+h6 {
+  color: var(--f-silver);
+}
+svg {
+  color: var(--f-white);
+}

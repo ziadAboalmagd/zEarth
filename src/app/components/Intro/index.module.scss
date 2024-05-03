@@ -1,0 +1,43 @@
+.intro {
+    margin: 30px 5px;
+    h2 {
+      font-size: 25px;
+      font-weight: 700;
+      text-transform: capitalize;
+    }
+    p {
+      width: 70%;
+      margin-top: 5px;
+      padding: 5px;
+    }
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 275px));
+    margin: 10px 3px;
+    justify-content: space-around;
+    div {
+      max-width: 500px;
+    }
+    svg {
+      font-size: 50px;
+      padding: 2px 5px;
+    }
+    h5 {
+      font-size: 17px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      text-transform: capitalize;
+      margin-top: 3px;
+    }
+    p {
+      margin-top: 5px;
+      padding: 7px 1px;
+      font-size: 14px;
+      font-weight: 300;
+      text-align: center;
+      text-transform: capitalize;
+    }
+  }
+  
