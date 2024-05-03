@@ -1,22 +1,16 @@
 import { useEffect, useState } from "react";
 
 export const useViewport = () => {
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState<number | undefined>(undefined);
 
   useEffect(() => {
-    const handleWindowResize = () => {
-      // Update width state only if window is available
-      if (typeof window !== "undefined") {
-        setWidth(window.innerWidth);
-      }
+    const handleResize = () => {
+      setWidth(window.innerWidth);
     };
-
-    // Add resize event listener
-    window.addEventListener("resize", handleWindowResize);
-
-    // Cleanup function to remove event listener
+    window.addEventListener("resize", handleResize);
+    handleResize();
     return () => {
-      window.removeEventListener("resize", handleWindowResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
