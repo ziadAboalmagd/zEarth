@@ -2,12 +2,12 @@ import axios from "axios";
 import moment from "moment";
 
 const countries = axios.create({
-  baseURL: `http://api.weatherapi.com/v1/current.json?key=d87964faf02c401088e33357240205&q=`,
+  baseURL: `/api/data`,
 });
 
 // get country timezone
 export const gCountry = async (country: string) => {
-  const response = await countries.post(country + "&aqi=no");
+  const response = await countries.get(country);
   // date and time
   const [date, time] = String(response.data.location.localtime).split(" ");
   // formated date
