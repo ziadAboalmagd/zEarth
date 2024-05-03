@@ -7,8 +7,10 @@ export default function Rimage(props: {
 }) {
   let [isOpen, setIsOpen] = useState(false);
 
-  function closeModal() {
-    setIsOpen(false);
+  function closeModal(e: any) {
+    if (e.target.tagName !== "IMG") {
+      setIsOpen(false);
+    }
   }
 
   function openModal() {
