@@ -64,7 +64,7 @@ export default function Home() {
   return (
     <main>
       {/* intro */}
-      <div className="grid grid-cols-5 gap-11 justify-between items-center min-h-96 px-3 py-2 my-3 mx-5 rounded-lg">
+      <div className="grid grid-cols-5 gap-11 justify-between items-center min-h-96 px-3 py-2 my-3 mx-5 rounded-lg relative">
         <div className="col-span-3 flex flex-col gap-3 justify-start">
           <h2 className="text-f-coral text-5xl font-bold tracking-widest">
             zEarth

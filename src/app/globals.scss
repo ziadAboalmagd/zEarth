@@ -68,6 +68,11 @@ html {
 *::-webkit-scrollbar {
   display: none;
 }
+html,
+body {
+  overflow-x: hidden;
+  position: relative;
+}
 
 body {
   display: flex;
