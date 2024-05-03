@@ -101,12 +101,12 @@
 
 @keyframes moveTopRightBottomLeft {
   0% {
-    transform: translateX(-30vw) translateY(-20vh);
-    -webkit-transform: translateX(-30vw) translateY(-20vh);
-    -moz-transform: translateX(-30vw) translateY(-20vh);
-    -ms-transform: translateX(-30vw) translateY(-20vh);
-    -o-transform: translateX(-30vw) translateY(-20vh);
-  }
+    transform: translateX(-13rem) translateY(-21rem);
+    -webkit-transform: translateX(-13rem) translateY(-21rem);
+    -moz-transform: translateX(-13rem) translateY(-21rem);
+    -ms-transform: translateX(-13rem) translateY(-21rem);
+    -o-transform: translateX(-13rem) translateY(-21rem);
+}
   100% {
     transform: translateX(130vw) translateY(130vw);
     -webkit-transform: translateX(130vw) translateY(130vw);
@@ -130,14 +130,14 @@
 }
 
 .rocket {
-  width: 17rem;
+  width: fit-content;
   z-index: -11;
   position: absolute;
-  transform: translateX(-30vw) translateY(-20vh);
-  -webkit-transform: translateX(-30vw) translateY(-20vh);
-  -moz-transform: translateX(-30vw) translateY(-20vh);
-  -ms-transform: translateX(-30vw) translateY(-20vh);
-  -o-transform: translateX(-30vw) translateY(-20vh);
+  transform: translateX(-13rem) translateY(-21rem);
+  -webkit-transform: translateX(-13rem) translateY(-21rem);
+  -moz-transform: translateX(-13rem) translateY(-21rem);
+  -ms-transform: translateX(-13rem) translateY(-21rem);
+  -o-transform: translateX(-13rem) translateY(-21rem);
   animation-iteration-count: 1;
   animation: moveTopRightBottomLeft 37s linear;
   -webkit-animation: moveTopRightBottomLeft 37s linear;
