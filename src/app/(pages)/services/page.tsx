@@ -95,7 +95,7 @@ export default function Services() {
           <div className={classes.e2d}>
             <div className="relative">
               <Image
-                src="/nEarth/2dnEarth.jpg"
+                src="/nEarth/2DnEarth.jpg"
                 alt="2Dearth"
                 width={400}
                 height={400}
