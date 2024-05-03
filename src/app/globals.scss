@@ -75,6 +75,7 @@ body {
   justify-content: space-between;
   min-height: 100vh;
   // background-color: hsl(var(--b1) / var(--tw-bg-opacity, 1));
+  overflow-x: hidden;
   background-color: var(--background-color);
   color: var(--f-white);
   max-width: 79rem;

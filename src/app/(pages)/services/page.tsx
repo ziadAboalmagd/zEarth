@@ -1,6 +1,6 @@
 "use client";
 // React & Next
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 
 // scss
@@ -13,8 +13,6 @@ import { Nearth } from "@/app/components/Earths";
 import { countries } from "@/app/constants";
 
 // React icons
-import { MdOutlineAccessTimeFilled } from "react-icons/md";
-import { CiCloudSun } from "react-icons/ci";
 import { MdErrorOutline } from "react-icons/md";
 import { Comments } from "@/app/components/Comments";
 import { IntroServ } from "@/app/components/Intro";
@@ -22,14 +20,20 @@ import { CgEditBlackPoint } from "react-icons/cg";
 
 // api utils
 import { gCountry } from "@/app/utils/api";
+import { useViewport } from "@/app/utils/other";
 
 // types
 import { country, data } from "@/app/types";
 import { APICard } from "@/app/components/APICard";
+import Rimage from "@/app/components/HeadlessUi/RImage";
 
 export default function Services() {
   // loading
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  // check width
+  const { width } = useViewport();
+  // small screens
+  const isSmall = Number(width) < 530;
   // point selected
   const [point, setPoint] = useState<number>();
   // country
@@ -93,29 +97,84 @@ export default function Services() {
         <div>
           {/* 2d map */}
           <div className={classes.e2d}>
-            <div className="relative">
-              <Image
-                src="/nEarth/2DnEarth.jpg"
-                alt="2Dearth"
-                width={400}
-                height={400}
+            {isSmall ? (
+              <Rimage
+                component={
+                  <div className="relative">
+                    <Image
+                      src="/nEarth/2DnEarth.jpg"
+                      alt="2Dearth"
+                      width={1000}
+                      height={1000}
+                    />
+                    {countries.map((p, index) => (
+                      <CgEditBlackPoint
+                        key={index}
+                        style={{
+                          position: "absolute",
+                          left: p.x + "%",
+                          top: p.y + "%",
+                          width: "7%",
+                          height: "7%",
+                          cursor: "pointer",
+                          color: p.color,
+                        }}
+                      />
+                    ))}
+                  </div>
+                }
+                fullC={
+                  <div className="relative w-rotatez">
+                    <Image
+                      src="/nEarth/2DnEarth.jpg"
+                      alt="2Dearth"
+                      width={1000}
+                      height={1000}
+                      className="rounded-xl"
+                    />
+                    {countries.map((p, index) => (
+                      <CgEditBlackPoint
+                        key={index}
+                        style={{
+                          position: "absolute",
+                          left: p.x + "%",
+                          top: p.y + "%",
+                          width: "7%",
+                          height: "7%",
+                          cursor: "pointer",
+                          color: p.color,
+                        }}
+                        onClick={() => handleClick(p.id)}
+                      />
+                    ))}
+                  </div>
+                }
               />
-              {countries.map((p, index) => (
-                <CgEditBlackPoint
-                  key={index}
-                  style={{
-                    position: "absolute",
-                    left: p.x + "%",
-                    top: p.y + "%",
-                    width: "7%",
-                    height: "7%",
-                    cursor: "pointer",
-                    color: p.color,
-                  }}
-                  onClick={() => handleClick(p.id)}
+            ) : (
+              <div className="relative">
+                <Image
+                  src="/nEarth/2DnEarth.jpg"
+                  alt="2Dearth"
+                  width={400}
+                  height={400}
                 />
-              ))}
-            </div>
+                {countries.map((p, index) => (
+                  <CgEditBlackPoint
+                    key={index}
+                    style={{
+                      position: "absolute",
+                      left: p.x + "%",
+                      top: p.y + "%",
+                      width: "7%",
+                      height: "7%",
+                      cursor: "pointer",
+                      color: p.color,
+                    }}
+                    onClick={() => handleClick(p.id)}
+                  />
+                ))}
+              </div>
+            )}
           </div>
           {/* <div></div> */}
         </div>

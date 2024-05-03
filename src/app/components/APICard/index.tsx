@@ -1,5 +1,5 @@
 // React & Next
-import React from "react";
+import React, { useState } from "react";
 
 // React icons
 import { MdOutlineAccessTimeFilled } from "react-icons/md";
@@ -12,6 +12,7 @@ import classes from "./index.module.scss";
 import { Zaudio } from "../Audio";
 
 export const APICard = (props: { coun: country; data: data }) => {
+  const [readMore, setReadmore] = useState<boolean>(false);
   const country = props.coun;
   const aData = props.data;
   return (
@@ -26,7 +27,7 @@ export const APICard = (props: { coun: country; data: data }) => {
       </div>
       {/* describe weather */}
       {/* <h5></h5> */}
-      <h6 className="flex !flex-col !justify-between !items-end gap-5">
+      <h6 className="flex !flex-col !justify-between !items-end gap-3">
         <span className="text-4xl text-f-backgroud">
           {aData?.cdegree} <span className="text-f-coral">°C</span>
           <CiCloudSun className="!text-5xl text-f-coral" />
@@ -49,10 +50,26 @@ export const APICard = (props: { coun: country; data: data }) => {
           unoptimized={true}
           className={classes.imgApi}
         />
-        <p className="text-f-backgroud leading-7">{country?.desc}</p>
-        {/* audio */}
-        <div className="flex justify-end items-end my-3">
-          <Zaudio src={String(country?.id)} />
+        <div>
+          <p
+            className="text-f-backgroud leading-7"
+            onClick={() => setReadmore(!readMore)}
+          >
+            {country?.desc.length > 371 ? (
+              <>
+                {readMore ? country?.desc : country?.desc.slice(0, 171)}
+                <span className="text-f-coral">
+                  {readMore ? "...readless" : "...readmore"}
+                </span>
+              </>
+            ) : (
+              country?.desc
+            )}
+          </p>
+          {/* audio */}
+          <div className="flex justify-end items-end my-3">
+            <Zaudio src={String(country?.id)} />
+          </div>
         </div>
       </div>
     </>
