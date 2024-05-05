@@ -122,8 +122,24 @@ const cdata = {
     {
       label: "clients",
       data: [320, 370, 400, 500, 600, 405, 220],
-      borderColor: ["#FF6384", "#4BC0C0", "#FFCE56", "#E7E9ED", "#36A2EB"],
-      backgroundColor: ["#FF6384", "#4BC0C0", "#FFCE56", "#E7E9ED", "#36A2EB"],
+      borderColor: [
+        "#e01a4f",
+        "#f9c22e",
+        "green",
+        "purple",
+        "hsl(234.12deg 100% 80%)",
+        "#253c78",
+        "pink",
+      ],
+      backgroundColor: [
+        "#e01a4f",
+        "#f9c22e",
+        "green",
+        "purple",
+        "hsl(234.12deg 100% 80%)",
+        "#253c78",
+        "pink",
+      ],
     },
   ],
 };

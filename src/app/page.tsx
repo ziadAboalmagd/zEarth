@@ -17,6 +17,7 @@ import { Oaudio, Zaudio } from "./components/Audio";
 
 // scss
 import "./App.scss";
+import { BlackHole, BlackShole } from "./components/BlackHoles";
 
 export default function Home() {
   // check width
@@ -77,6 +78,8 @@ export default function Home() {
             magnam nemo aliquam?
           </p>
         </div>
+        {/* blackhole */}
+        <BlackShole />
         <div className="animatedBounce col-span-2">
           <Zmarker />
         </div>
@@ -104,8 +107,10 @@ export default function Home() {
       <div className="astronaut mt-3">
         <Charts />
       </div>
+      {/* blackhole */}
+      <BlackHole />
       {/* cards increment   */}
-      <div className="mx-11 my-11">
+      <div className="mx-11 mt-20 mb-11 z-10 relative">
         <h2 className="font-extrabold text-2xl capitalize text-f-coral">
           users
         </h2>
