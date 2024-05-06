@@ -31,6 +31,8 @@ export const IntroServ = () => {
             width={500}
             height={500}
             alt="astronaut"
+            className="transition-opacity opacity-0 duration-[2s]"
+            onLoadingComplete={(image) => image.classList.remove("opacity-0")}
           />
         </div>
         {/* moon */}

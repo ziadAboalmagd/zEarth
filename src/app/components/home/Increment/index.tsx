@@ -1,4 +1,4 @@
-"use client"
+"use client";
 // React & Next
 import React, { useEffect, useRef, useState } from "react";
 
@@ -7,14 +7,14 @@ import { CiUser } from "react-icons/ci";
 
 export const InCrad = () => {
   // api user counter
-  const [count, setCount] = useState<number>(71);
+  const [count, setCount] = useState<number>(
+    typeof localStorage !== "undefined"
+      ? Number(localStorage.getItem("count")) > 1000
+        ? Number(localStorage.getItem("count"))
+        : 71
+      : 71
+  );
   const countRef = useRef(count);
-  // increaseing
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setCount(Number(localStorage.getItem("count")));
-    }
-  }, []);
   // increaseing
   useEffect(() => {
     const interval = setInterval(() => {
@@ -46,9 +46,7 @@ export const InCrad = () => {
     <>
       {/* cards increment   */}
       <div className="mx-11 mt-20 mb-11 z-10 relative">
-        <h2 className="font-extrabold text-2xl capitalize">
-          users
-        </h2>
+        <h2 className="font-extrabold text-2xl capitalize">users</h2>
         <div className="flex justify-center mt-5">
           <div className="flex flex-col justify-center items-center gap-3 bg-f-lbackgroud rounded-2xl py-5 px-3">
             <div className="flex flex-row justify-between gap-3 items-center">

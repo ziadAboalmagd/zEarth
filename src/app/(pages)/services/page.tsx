@@ -108,6 +108,10 @@ export default function Services() {
                         alt="2Dearth"
                         width={1000}
                         height={1000}
+                        className="transition-opacity opacity-0 duration-[2s]"
+                        onLoadingComplete={(image) =>
+                          image.classList.remove("opacity-0")
+                        }
                       />
                       {countries.map((p, index) => (
                         <CgEditBlackPoint

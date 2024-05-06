@@ -29,21 +29,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        {/* stars */}
-        <Starfield
-          starCount={1000}
-          starColor={[255, 255, 255]}
-          speedFactor={0.05}
-          backgroundColor="black"
-        />
-        {/* header */}
-        <Zheader />
+        <main>
+          {/* stars */}
+          <Starfield
+            starCount={1000}
+            starColor={[255, 255, 255]}
+            speedFactor={0.05}
+            backgroundColor="black"
+          />
+          {/* header */}
+          <Zheader />
 
-        {/* children */}
-        {children}
-        {/* footer */}
-        <Footer />
-        {/* <ToastContainer limit={1} /> */}
+          {/* children */}
+          {children}
+          {/* footer */}
+          <Footer />
+          {/* <ToastContainer limit={1} /> */}
+        </main>
       </body>
     </html>
   );

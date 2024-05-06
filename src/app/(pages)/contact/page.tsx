@@ -160,7 +160,6 @@ const Contact = () => {
       }
   
       body {
-          background-color: black;
           position: relative;
           color: white;
       }

@@ -48,14 +48,18 @@ export const APICard = (props: { coun: country; data: data }) => {
           width={200}
           height={200}
           unoptimized={true}
-          className={classes.imgApi}
+          className={`${classes.imgApi} transition-opacity opacity-0 duration-[2s]`}
+          onLoadingComplete={(image) => image.classList.remove("opacity-0")}
         />
         <div>
           <p className="text-f-white leading-7">
             {country?.desc.length > 171 ? (
               <>
                 {readMore ? country?.desc : country?.desc.slice(0, 171)}
-                <span onClick={() => setReadmore(!readMore)} className="text-f-dblue">
+                <span
+                  onClick={() => setReadmore(!readMore)}
+                  className="text-f-dblue"
+                >
                   {readMore ? "....ReadLess" : "....ReadMore"}
                 </span>
               </>

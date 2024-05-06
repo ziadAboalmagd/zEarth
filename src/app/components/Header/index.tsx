@@ -1,4 +1,4 @@
-"use client"
+"use client";
 // React & Next
 import React from "react";
 import Link from "next/link";
@@ -32,7 +32,7 @@ export default function Zheader() {
         {/* nav list */}
         <Menu as="div" className="zhead:!hidden relative text-left ">
           <Menu.Button
-            className={`${classes.menuBtn} flex flex-row justify-between items-center gap-2 text-xs px-5 py-2 rounded`}
+            className={`${classes.menuBtn} flex flex-row justify-between items-center gap-2 px-5 py-2`}
           >
             <FaBars />
           </Menu.Button>

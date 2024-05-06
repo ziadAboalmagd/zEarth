@@ -12,7 +12,7 @@ import "./App.scss";
 
 export default function Home() {
   return (
-    <main>
+    <div>
       {/* intro */}
       <IntroHome />
       {/* order's chart */}
@@ -28,14 +28,7 @@ export default function Home() {
       {/* earth & plane */}
       <Gmap />
       {/* 3d earth */}
-      <div className="hidden zearth:!flex flex-col gap-3 mt-20">
-        <span className="jfont w-fit mx-auto text-2xl font-semibold capitalize tracking-widest">
-          embark on a journey to discover the marvels of our planet with us
-        </span>
-        <div className="my-5 mb-11 overflow-hidden">
-          <Mearth />
-        </div>
-      </div>
-    </main>
+      <Mearth />
+    </div>
   );
 }

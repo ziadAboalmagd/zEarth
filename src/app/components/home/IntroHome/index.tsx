@@ -1,3 +1,4 @@
+"use client";
 // React & Next
 import React from "react";
 import Image from "next/image";
@@ -11,9 +12,7 @@ export const IntroHome = () => {
     <>
       <div className="grid grid-cols-5 gap-11 justify-between items-center min-h-96 px-3 py-2 my-3 mx-2 rounded-lg relative">
         <div className="col-span-3 flex flex-col gap-3 justify-start">
-          <h2 className="text-5xl font-bold tracking-widest">
-            zEarth
-          </h2>
+          <h2 className="text-5xl font-bold tracking-widest">zEarth</h2>
           <h4 className="capitalize">pioneers in our respective fields</h4>
           <p className="font-thin">
             welcome to our journey through the wonders of our planet. earth is a
@@ -35,6 +34,8 @@ export const IntroHome = () => {
             width={500}
             height={500}
             alt="astronaut"
+            className="transition-opacity opacity-0 duration-[2s]"
+            onLoadingComplete={(image) => image.classList.remove("opacity-0")}
           />
         </div>
         {/* rotator astronaut */}
@@ -44,6 +45,8 @@ export const IntroHome = () => {
             width={500}
             height={500}
             alt="astronaut"
+            className="transition-opacity opacity-0 duration-[2s]"
+            onLoadingComplete={(image) => image.classList.remove("opacity-0")}
           />
         </div>
       </div>

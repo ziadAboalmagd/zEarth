@@ -32,6 +32,8 @@ export function BlackHole() {
           alt="blackhole"
           width={1000}
           height={1000}
+          className="transition-opacity opacity-0 duration-[2s]"
+          onLoadingComplete={(image) => image.classList.remove("opacity-0")}
         />
       </div>
     </div>
@@ -46,6 +48,8 @@ export function BlackShole() {
         alt="blackhole"
         width={1000}
         height={1000}
+        className="transition-opacity opacity-0 duration-[2s]"
+        onLoadingComplete={(image) => image.classList.remove("opacity-0")}
       />
     </div>
   );

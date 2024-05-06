@@ -35,7 +35,6 @@ const Zabout = () => {
 
 .container h1 {
    font-size: 40px;
-
 }
 
 .about {
@@ -43,7 +42,7 @@ const Zabout = () => {
    text-align: justify;
    display: grid;
    grid-template-columns: auto auto;
-   margin-top: 100px;
+   margin-top: 50px;
 }
 
 .about .left {
@@ -2508,9 +2507,9 @@ hr {
           With an eye for detail and a passion for user experience and
           appropriate color, crafts intuitive websites.
         </p>
-        <div class="zlinks"><a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-linkedin"></a></div>
+        <div class="zlinks"><a target="_blank"  href="#" class="fa fa-facebook"></a>
+        <a target="_blank"  href="#" class="fa fa-twitter"></a>
+        <a target="_blank"  href="#" class="fa fa-linkedin"></a></div>
       </div>
       <div class="team-member">
         <img src="/about/ziad.jpeg" alt="Team Member 2" />
@@ -2520,9 +2519,9 @@ hr {
           ziad's technical expertise and problem-solving skills ensure our
           websites are built on a strong, reliable foundation.
         </p>
-        <div class="zlinks"><a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-linkedin"></a></div>
+        <div class="zlinks"><a target="_blank"  href="https://www.facebook.com/ziad.gamal.771/" class="fa fa-facebook"></a>
+        <a target="_blank"  href="#" class="fa fa-twitter"></a>
+        <a target="_blank"  href="https://www.linkedin.com/in/ziad-aboalmajd-17332b241/" class="fa fa-linkedin"></a></div>
       </div>
       <div class="team-member">
         <img src="/about/mohamed.jpeg" alt="Team Member 3" />
@@ -2532,9 +2531,9 @@ hr {
           With Strong backgrounds. he collaborates seamlessly to deliver
           exceptional results.
         </p>
-        <div class="zlinks"><a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-linkedin"></a></div>
+        <div class="zlinks"><a target="_blank"  href="https://www.facebook.com/m7mDGaMaL.MGM3?mibextid=ZbWKwL" class="fa fa-facebook"></a>
+        <a target="_blank" href="https://www.instagram.com/__m7md_gamal__?igsh=NTV6bHhjMGpzMXc=" class="fa fa-twitter"></a>
+        <a target="_blank" href="https://www.linkedin.com/in/mohamed-abdelrehem-20607324b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="fa fa-linkedin"></a></div>
       </div>
       <div class="team-member move">
         <img
@@ -2547,9 +2546,9 @@ hr {
           Provide individual strengths and diverse perspectives to drive
           innovation and deliver the best possible solutions.
         </p>
-        <div class="zlinks"><a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-linkedin"></a></div>
+        <div class="zlinks"><a target="_blank"  href="https://www.facebook.com/profile.php?id=100086566063431&mibextid=ZbWKwL" class="fa fa-facebook"></a>
+        <a target="_blank"  href="https://www.instagram.com/je.0mar?igsh=eWJxN3lrNDIwcHF2" class="fa fa-twitter"></a>
+        <a target="_blank"  href="https://www.linkedin.com/in/omar-m-fattouh-249ba827a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="fa fa-linkedin"></a></div>
       </div>
     </div>
   </div>
