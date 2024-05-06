@@ -14,7 +14,6 @@
 html {
   margin: 0 3px;
 }
-
 // root
 :root {
   // final colors
@@ -177,7 +176,9 @@ svg {
   font-family: "Jersey 10", sans-serif;
 }
 
-.gmnoprint {
-  color: red;
-  background-color: red;
+.astronaut {
+  background-image: url("/3D models/astronaut.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }

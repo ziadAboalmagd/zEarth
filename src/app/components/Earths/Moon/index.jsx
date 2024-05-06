@@ -1,17 +1,15 @@
-// react
-import React from "react";
-
-// pacakges
+import React, { useEffect, useState } from "react";
 import { Gltf, OrbitControls } from "@react-three/drei";
-
-// utils
 import { useViewport } from "@/app/utils/other";
 
 export default function Marker() {
-  // check width
   const { width } = useViewport();
-  // small screens
   const isSmallScreen = Number(width) < 720;
+  const [isModelLoaded, setIsModelLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsModelLoaded(true);
+  }, []);
   return (
     <>
       <ambientLight intensity={2.9} />
@@ -29,13 +27,16 @@ export default function Marker() {
         shadow-camera-top={10}
         shadow-camera-right={10}
       />
-      <Gltf
-        src={"/3D models/the_moon.glb"}
-        scale={isSmallScreen ? 1.3 : 2.3}
-        position={[0, 0, 0]}
-        rotateZ={10}
-        rot
-      />
+      {/* Render the model only if it's loaded */}
+      {isModelLoaded && (
+        <Gltf
+          src={"/3D models/the_moon.glb"}
+          scale={isSmallScreen ? 1.3 : 2.3}
+          position={[0, 0, 0]}
+          rotateZ={10}
+          rot
+        />
+      )}
       <OrbitControls
         enableZoom={false}
         enablePan={true}

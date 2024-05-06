@@ -123,22 +123,22 @@ const cdata = {
       label: "clients",
       data: [320, 370, 400, 500, 600, 405, 220],
       borderColor: [
-        "#e01a4f",
-        "#f9c22e",
-        "green",
-        "purple",
+        "#d7425e",
+        "#48a8e2",
         "hsl(234.12deg 100% 80%)",
-        "#253c78",
-        "pink",
+        "#f2a35f",
+        "#c9a690",
+        "#bfc0c0",
+        "green",
       ],
       backgroundColor: [
-        "#e01a4f",
-        "#f9c22e",
-        "green",
-        "purple",
+        "#d7425e",
+        "#48a8e2",
         "hsl(234.12deg 100% 80%)",
-        "#253c78",
-        "pink",
+        "#f2a35f",
+        "#c9a690",
+        "#bfc0c0",
+        "green",
       ],
     },
   ],
@@ -153,33 +153,33 @@ export default function Charts() {
   const istooSmall = Number(width) < 480;
 
   return (
-    <div className="flex flex-col justify-between gap-7 min-h-semiFull mx-11 my-2">
-      {/* title */}
-      <h2 className="font-extrabold text-2xl capitalize">
-        statistics
-      </h2>
-      {/* total orders & clients */}
-      {/* mapping later */}
-      <div className="flex flex-row  justify-between bg-f-lbackgroud py-7 px-5 rounded-2xl">
-        <h5 className="font-semibold text-f-white">total orders</h5>
-        <h6 className="text-f-white">1150 orders</h6>
-      </div>
-      <div className="flex flex-row  justify-between bg-f-lbackgroud py-7 px-5 rounded-2xl">
-        <h5 className="font-semibold text-f-white">total clients</h5>
-        <h6 className="text-f-white">117 clients</h6>
-      </div>
-      {/* reports charts*/}
-      <div className="flex flex-1 flex-col justify-between bg-f-lbackgroud py-7 px-5 rounded-2xl min-h-40">
-        <h5 className="font-semibold text-f-white">reports</h5>
-        {isSmallScreen ? (
-          istooSmall ? (
-            <PolarArea options={coptions} data={cdata} />
+    <div className="astronaut mt-3">
+      <div className="flex flex-col justify-between gap-7 min-h-semiFull mx-11 my-2">
+        {/* title */}
+        <h2 className="font-extrabold text-2xl capitalize">statistics</h2>
+        {/* total orders & clients */}
+        {/* mapping later */}
+        <div className="flex flex-row  justify-between bg-f-lbackgroud py-7 px-5 rounded-2xl">
+          <h5 className="font-semibold text-f-white">total orders</h5>
+          <h6 className="text-f-white">1150 orders</h6>
+        </div>
+        <div className="flex flex-row  justify-between bg-f-lbackgroud py-7 px-5 rounded-2xl">
+          <h5 className="font-semibold text-f-white">total clients</h5>
+          <h6 className="text-f-white">117 clients</h6>
+        </div>
+        {/* reports charts*/}
+        <div className="flex flex-1 flex-col justify-between bg-f-lbackgroud py-7 px-5 rounded-2xl min-h-40">
+          <h5 className="font-semibold text-f-white">reports</h5>
+          {isSmallScreen ? (
+            istooSmall ? (
+              <PolarArea options={coptions} data={cdata} />
+            ) : (
+              <Bar options={options} data={data} />
+            )
           ) : (
-            <Bar options={options} data={data} />
-          )
-        ) : (
-          <Line options={options} data={data} />
-        )}
+            <Line options={options} data={data} />
+          )}
+        </div>
       </div>
     </div>
   );

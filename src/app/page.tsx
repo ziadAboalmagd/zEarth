@@ -16,9 +16,7 @@ export default function Home() {
       {/* intro */}
       <IntroHome />
       {/* order's chart */}
-      <div className="astronaut mt-3">
-        <Charts />
-      </div>
+      <Charts />
       {/* blackhole */}
       <BlackHole />
       {/* increment card */}
