@@ -1,3 +1,5 @@
+"use client";
+// React & Next
 import { useEffect, useState } from "react";
 
 export const useViewport = () => {
@@ -14,6 +16,5 @@ export const useViewport = () => {
     };
   }, []);
 
-  // Return the width so we can use it in our components
   return { width };
 };

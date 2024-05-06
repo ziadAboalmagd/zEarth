@@ -15,18 +15,11 @@ html {
   margin: 0 3px;
 }
 
-// varaibles
-// $link-color: #f2a35f;
-// $icon-color: #a37370;
-// $link-hover-color: #69848c;
-// $hedaer-color: #f7d155;
-// $desc-color: #e7d7c1;
-// $light-color: #1a1e23;
-
 // root
 :root {
   // final colors
   --f-backgroud: #31383f;
+  --f-lbackgroud: rgb(49 56 63 / 45%);
   --f-silver: #bfc0c0;
   --f-white: #e7d7c1;
   --f-lyellow: #ffffb3;
@@ -36,10 +29,12 @@ html {
   --f-purple: hsl(234.12deg 100% 80%);
   --f-dpurple: #575cdf;
   --f-pink: #f490c1;
-  --f-dpink: #ff8a99;
+  --f-dpink: #d7425e;
+  --f-zpink: #ff8a99;
   --f-lpink: hsl(319.57deg 100% 63.92%);
   --f-red: #e01a4f;
   --f-teal: hsl(180deg 100% 75.49%);
+  --f-dblue: #48a8e2;
   --f-blue: hsl(214.93deg 100% 55.88%);
   --f-sky: #53b3cb;
   // dark theme
@@ -68,8 +63,7 @@ html {
 *::-webkit-scrollbar {
   display: none;
 }
-html,
-body {
+html {
   overflow-x: hidden;
   position: relative;
 }
@@ -172,5 +166,14 @@ h6 {
   color: var(--f-silver);
 }
 svg {
-  color: var(--f-white);
+  color: var(--f-dblue);
+}
+
+.jfont {
+  font-family: "Jersey 10", sans-serif;
+}
+
+.gmnoprint {
+  color: red;
+  background-color: red;
 }

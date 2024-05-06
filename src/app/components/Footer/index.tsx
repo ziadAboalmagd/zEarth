@@ -19,23 +19,15 @@ function Footer() {
       <div className={classes.logo}>
         <Link
           href="/"
-          className="flex flex-row items-center gap-1 text-6xl text-f-dpink tracking-widest mx-3 py-1"
+          className="flex flex-row items-center gap-1 text-6xl text-f-dpink  font-bold tracking-widest mx-3 py-1"
         >
-          zEarth <IoEarth className="text-f-white" />
-        </Link>{" "}
+          zEarth <IoEarth />
+        </Link>
       </div>
       {/* social links */}
-      <div className={classes.socialLinks}>
+      <div className={`${classes.socialLinks} zfoot:!grid-cols-3 zfoot:gap-0`}>
         {socialLinks.map((i, index) => (
           <Link key={index} href={i.link} className={classes.socialLink}>
-            {/* {
-              <Image
-                src={`/img/${i.icon}.svg`}
-                alt="social"
-                width={25}
-                height={25}
-              />
-            } */}
             <i.icon className={classes.icon} />
             <h5 className={classes.socialTitle}>{i.label}</h5>
           </Link>

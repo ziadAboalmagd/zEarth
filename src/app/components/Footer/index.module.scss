@@ -19,16 +19,17 @@
 
 .socialLinks {
   display: grid;
-  grid-template-columns: repeat(3, minmax(50px, 150px));
+  grid-template-columns: repeat(2, minmax(50px, 150px));
   justify-content: space-around;
+  gap: 1.25rem;
 }
 
 .socialLink {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
-  gap: 3px;
+  justify-content: center;
+  gap: 10px;
 }
 
 .socialTitle {
@@ -48,4 +49,5 @@
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 2px;
+  text-align: center;
 }

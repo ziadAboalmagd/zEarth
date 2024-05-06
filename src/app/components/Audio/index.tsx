@@ -30,9 +30,9 @@ export const Zaudio = (props: { src: string }) => {
   return (
     <div onClick={toggleSound} className="px-3">
       {isPlaying ? (
-        <CiVolumeHigh className="text-5xl text-f-coral" />
+        <CiVolumeHigh className="text-5xl" />
       ) : (
-        <CiVolume className="text-5xl text-f-coral" />
+        <CiVolume className="text-5xl" />
       )}
       <audio ref={audioRef} src={`/audio/${props.src}.mp3`} />
     </div>

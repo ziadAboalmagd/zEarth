@@ -6,17 +6,18 @@ const EarthM = () => {
   <style>
   #mearth{
     display: flex;
+    justify-content: center;
     margin: auto;
     overflow: hidden;
+    position: relative;
     max-width: 70rem;
-    justify-content: center;
   }
   
   .sun-background {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, rgb(255 219 158), rgb(253 243 220));
+    //background: linear-gradient(45deg, rgb(255 219 158), rgb(253 243 220));
     opacity: 1;
     border-radius: 11px;
     max-width: 59rem;
@@ -27,7 +28,7 @@ const EarthM = () => {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(313deg, #0b1a2b 33%, #3a6291 111%);
+    //background: linear-gradient(313deg, #0b1a2b 33%, #3a6291 111%);
     opacity: 0;
     border-radius: 11px;
     max-width: 59rem;

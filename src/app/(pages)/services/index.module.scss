@@ -33,7 +33,7 @@
 }
 
 .data {
-  background-color: var(--f-white);
+  background-color: var(--f-lbackgroud);
   margin: 30px 5px;
   padding: 15px 11px;
   border-radius: 19px;
@@ -81,7 +81,6 @@
       gap: 3px;
       svg {
         font-size: 23px;
-        color: var(--f-coral);
       }
     }
   }

@@ -26,11 +26,13 @@ const config: Config = {
           purple: "hsl(234.12deg 100% 80%)",
           dpurple: "#575cdf",
           pink: "#f490c1",
-          dpink: "#ff8a99",
+          zpink: "#ff8a99",
+          dpink: "#d7425e",
           lpink: "hsl(319.57deg 100% 63.92%)",
           red: "#e01a4f",
           teal: "hsl(180deg 100% 75.49%)",
           blue: "hsl(214.93deg 100% 55.88%)",
+          dblue: "#48A8E2",
           sky: "#53b3cb",
         }
         ,
@@ -61,6 +63,11 @@ const config: Config = {
       },
       width: {
         rotatez: "91vh"
+      },
+      screens: {
+        "zhead": "777px",
+        "zearth": "931px",
+        "zfoot": "525px"
       }
     },
   },

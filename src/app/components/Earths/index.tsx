@@ -9,6 +9,7 @@ import { Canvas } from "@react-three/fiber";
 import EarthN from "./earthn";
 import EarthM from "./earthm";
 import Marker from "./Marker";
+import Moon from "./Moon";
 
 // scss
 import classes from "./index.module.scss";
@@ -37,6 +38,16 @@ export function Zmarker() {
     <Canvas className={`${classes.earth}`}>
       <Suspense fallback={null}>
         <Marker />
+      </Suspense>
+    </Canvas>
+  );
+}
+
+export function Zmoon() {
+  return (
+    <Canvas className={`${classes.earth}`}>
+      <Suspense fallback={null}>
+        <Moon />
       </Suspense>
     </Canvas>
   );

@@ -20,22 +20,21 @@
 }
 
 .menuBtn {
-  color: var(--f-dpink);
-  font-weight: 700;
-  background-color: var(--f-white);
+  font-size: 27px;
+  // background-color: var(--f-white);
   svg {
     color: var(--f-dpink);
   }
 }
 
 .menuItem {
-  color: var(--f-background);
+  color: var(--f-lbackground);
 }
 
 .menuTitle {
   font-weight: 600;
   text-transform: capitalize;
-  color: var(--f-backgroud);
+  color: var(--f-white);
 }
 
 .navItem {

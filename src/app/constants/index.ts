@@ -5,10 +5,10 @@ import { comment, linkitem } from "@/app/types";
 import { FaHome } from "react-icons/fa";
 import { MdMessage } from "react-icons/md";
 import { GrServices } from "react-icons/gr";
-import { MdCall } from "react-icons/md";
+import { FaUserFriends } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
-import { CiInstagram } from "react-icons/ci";
+import { FaInstagram } from "react-icons/fa";
 import { CiUser } from "react-icons/ci";
 import { SlUserFemale } from "react-icons/sl";
 import { FaMapMarkerAlt } from "react-icons/fa";
@@ -20,7 +20,7 @@ import { MdOutlineAccessTimeFilled } from "react-icons/md";
 export const navItems: linkitem[] = [
   { label: "home", link: "", icon: FaHome },
   { label: "contact us", link: "contact", icon: MdMessage },
-  { label: "about us", link: "about", icon: MdCall },
+  { label: "about us", link: "about", icon: FaUserFriends },
   { label: "services", link: "services", icon: GrServices },
 ];
 
@@ -44,7 +44,8 @@ export const socialLinks: linkitem[] = [
     label: "instagram",
     link: "https://www.instagram.com/",
     // icon: "instagram",
-    icon: CiInstagram,
+    icon: FaInstagram
+    ,
   },
 ];
 
